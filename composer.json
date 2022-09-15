@@ -1,0 +1,26 @@
+{
+    "name": "oaked/statamic-resend-form-submissions",
+    "description": "Resend Form Submissions is a Statamic addon for resending form submissions.",
+    "type": "statamic-addon",
+    "license": "MIT",
+    "require": {
+        "statamic/cms": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Oaked\\ResendFormSubmissions\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Resend Form Submissions",
+            "description": "Resend Form Submissions addon",
+            "version": "1.0.0"
+        },
+        "laravel": {
+            "providers": [
+                "Oaked\\ResendFormSubmissions\\ServiceProvider"
+            ]
+        }
+    }
+}
