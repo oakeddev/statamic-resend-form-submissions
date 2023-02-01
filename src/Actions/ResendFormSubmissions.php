@@ -35,8 +35,12 @@ class ResendFormSubmissions extends Action
 
     public function visibleTo($item): bool
     {
-        $emailData = $item->form()->email();
+        if (!$item instanceof Submission) {
+            return false;
+        }
 
-        return $emailData && $item instanceof Submission;
+        $emailData = (bool)$item->form()->email();
+
+        return $emailData;
     }
 }
